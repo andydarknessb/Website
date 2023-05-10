@@ -1,0 +1,52 @@
+.about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: green;
+  }
+  
+
+  
+  
+  .paragraph {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    color: #555;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .paragraph {
+      font-size: 1.1rem;
+    }
+  }
+
+  .about-me-container {
+    height: 500px; /* Set the desired fixed height */
+    overflow: auto;
+  }
+  
+  .about-me {
+    padding: 20px;
+  }
+
+  
+  

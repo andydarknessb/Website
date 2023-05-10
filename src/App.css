@@ -1,14 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
 .App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #228B22, #FFDB58, #87CEFA, #E6E6FA, #DDA0DD);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
 
-  background-size: cover;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .navbar {
-  position: fixed;
+  position: left;
   top: 40%;
   left: 20%;
   display: flex;
@@ -31,44 +55,65 @@
 .container {
   display: flex;
   max-width: 80%;
-  min-height: 80%;
+  min-height: 50%;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  width: 50%;
-  margin: 40px auto;
-  padding: 20px;
-  min-height: 600px; 
-  max-height: 800px;
+  margin: auto;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.left, .right {
+  padding: 0px;
+  margin: 10px;
+  
 }
 
 .left {
-  flex: 1;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 0px 50px green;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
+  padding: 20px;
+  margin-right: -50px;
 }
 
+
 .profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 475px;
+  height: 400px;
   object-fit: cover;
+  margin: -20px -20px 0;
+  border-top-left-radius: 10px;
+  border: 5px solid black;
+  box-shadow: 0px 0px 40px gray;
 }
 
 .jobs p {
   margin: 0;
+  height: 1px;
+  color: green;
 }
 
 .links a {
+  position: absolute;
   text-decoration: none;
   margin: 5px;
-  color: #0a66c2;
+  color: blueviolet;
 }
 
 .right {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0px 0px 20px green;
   flex: 2;
-  padding-left: 20px;
+  padding-left: 10px;
 }
+
