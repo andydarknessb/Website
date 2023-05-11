@@ -1,9 +1,11 @@
 import React from "react";
+import { Typography } from "@material-ui/core";
 
 const Projects = () => (
   <div>
-    <h2>Projects</h2>
-    <p>Your projects content goes here...</p>
+    <Typography variant="h4" gutterBottom style={{textAlign: 'center'}}>Projects:</Typography>
+    <codersrank-portfolio username="andydarknessb"></codersrank-portfolio>
+ 
   </div>
 );
 

@@ -1,16 +1,34 @@
 import React from "react";
 import classes from "./Resume.css";
 import { Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Icon from "@material-ui/core/Icon";
 
 
-const Resume = () => (
-  <div>
-    <Typography variant="h4" gutterBottom style={{textAlign: 'center'}}>Resume:</Typography>
+const useStyles = makeStyles((theme) => ({
+    header: {
+      textAlign: "center",
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(2),
+      fontWeight: theme.typography.fontWeightBold,
+    },
+  }));
+  
+  const Resume = () => {
+    const localClasses = useStyles();
+    return (
+        <div className={localClasses.root}>
+          <Typography variant="h4" gutterBottom className={localClasses.header}>
+            Resume
+          </Typography>
     <codersrank-summary
           username="andydarknessb"
           layout="vertical"
         ></codersrank-summary>
             <div className={classes.badges}>
+            <Typography variant="h4" gutterBottom style={{ textAlign: "center" }}>
+  <Icon style={{ verticalAlign: "middle", marginRight: "8px" }}></Icon>Tech Stack</Typography>
+
           <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
           <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
           <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -29,8 +47,14 @@ const Resume = () => (
           <img src="https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white" alt="Microsoft SQL Server" />
           <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
           </div>
-    <codersrank-work-experience username="andydarknessb" logos></codersrank-work-experience>
-    <codersrank-education
+
+          <div style={{ margin: '4em 0'}}>
+          <Typography variant="h4" gutterBottom style={{textAlign: 'center'}}>Work Experience</Typography>
+          <codersrank-work-experience username="andydarknessb" logos></codersrank-work-experience>
+          </div>
+
+          <Typography variant="h4" gutterBottom style={{textAlign: 'center'}}>Education</Typography>
+          <codersrank-education
           username="andydarknessb"
           max-items="3"
           education="true"
@@ -44,5 +68,6 @@ const Resume = () => (
         ></codersrank-education>
   </div>
 );
+  };
 
 export default Resume;
