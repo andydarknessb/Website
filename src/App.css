@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html, body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {
@@ -9,14 +12,15 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  
   display: flex;
-  height: 100vh;
+  
+  min-height: 100%; 
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #228B22, #FFDB58, #87CEFA, #E6E6FA, #DDA0DD);
   background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
+  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -31,16 +35,6 @@ html, body {
   }
 }
 
-.navbar {
-  position: left;
-  top: 40%;
-  left: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 .nav-item {
   display: flex;
   align-items: center;
@@ -48,8 +42,25 @@ html, body {
   width: 50px;
   height: 50px;
   background: #f0f0f0;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 128, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  box-shadow: 0px 4px 20px rgba(0, 128, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.navbar {
+  position: left;
+  top: 40%;
+  left: 5%;
+  display: left;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .container {
@@ -61,8 +72,7 @@ html, body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   margin: auto;
   padding: 0;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .left, .right {
@@ -75,16 +85,41 @@ html, body {
   background-color: whitesmoke;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 0px 0px 50px green;
-  width: 20%;
+  box-shadow: 0px 2px 20px rgba(0, 128, 0, 0.2);
+  width: 25%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
+  gap: 20px;
   padding: 20px;
-  margin-right: -50px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
+.left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 128, 0, 0.05);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.left:hover {
+  box-shadow: 0px 4px 30px rgba(0, 128, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.left:hover::before {
+  background-color: rgba(0, 128, 0, 0.1);
+}
 
 .profile-picture {
   width: 475px;
@@ -92,8 +127,14 @@ html, body {
   object-fit: cover;
   margin: -20px -20px 0;
   border-top-left-radius: 10px;
-  border: 5px solid black;
-  box-shadow: 0px 0px 40px gray;
+  border: 5px solid rgba(0, 128, 0, 0.5);
+  box-shadow: 0px 0px 40px rgba(0, 128, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+  box-shadow: 0px 0px 50px rgba(0, 128, 0, 0.4);
+  transform: scale(1.02);
 }
 
 .jobs p {
@@ -110,10 +151,95 @@ html, body {
 }
 
 .right {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 0 10px 10px 0;
-  box-shadow: 0px 0px 20px green;
-  flex: 2;
-  padding-left: 10px;
+  background-color: whitesmoke;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 2px 20px rgba(0, 128, 0, 0.2);
+  flex: 3;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  height: 600px;
+  flex-grow: 1;
 }
+
+.right::before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 128, 0, 0.05);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.right:hover {
+  box-shadow: 0px 4px 30px rgba(0, 128, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.right:hover::before {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .left {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .left {
+    padding: 10px;
+  }
+
+  .right {
+    padding: 10px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .left {
+    padding: 5px;
+  }
+
+  .right {
+    padding: 5px;
+  }
+
+  .profile-picture {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+
 

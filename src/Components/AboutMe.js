@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import "./AboutMe.css";
+//import "./AboutMe.css";
 
 
 const AboutMe = () => (

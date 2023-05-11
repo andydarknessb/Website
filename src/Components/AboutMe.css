@@ -18,9 +18,6 @@
     color: green;
   }
   
-
-  
-  
   .paragraph {
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -40,7 +37,7 @@
   }
 
   .about-me-container {
-    height: 500px; /* Set the desired fixed height */
+    height: 600px; /* Set the desired fixed height */
     overflow: auto;
   }
   

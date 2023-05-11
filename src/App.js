@@ -37,6 +37,7 @@ function App() {
   const typingSpeed = 100;
   const delayBetweenTexts = 1000;
   const displayedJob = useTypingEffect(jobs, typingSpeed, delayBetweenTexts);
+  
 
   return (
     <div className="App">
