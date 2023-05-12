@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Cory Anderson's Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the GitHub repository for Cory Anderson's personal portfolio website. This website showcases Cory's skills, projects, experience, and education, as well as providing a simple way to get in touch with him. Built with modern web technologies such as React, Material-UI, and React Router, this portfolio website is designed to be both visually appealing and user-friendly.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive design for an optimal viewing experience on any device
+- A clean and modern user interface, powered by Material-UI components
+- Interactive navigation with smooth page transitions using React Router
+- Dynamic content loading with modularized components for easy maintenance and updates
+- A contact form with server-side email sending capabilities
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Home**: Displays an overview of Cory's personal information and a quick introduction to his skills.
+2. **About**: Provides a detailed biography of Cory, his interests, and motivations.
+3. **Projects**: Showcases Cory's projects, with descriptions, technologies used, and links to live demos and source code.
+4. **Skills**: Highlights Cory's technical skills and expertise, as well as any relevant tools and frameworks he has experience with.
+5. **Experience**: Lists Cory's professional experience, including job titles, company names, and brief descriptions of his roles and accomplishments.
+6. **Education**: Presents information about Cory's educational background, including institutions, degrees, and certifications.
+7. **Contact**: Displays a contact form for users to get in touch with Cory directly.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React
+- React Router
+- Material-UI
+- Node.js
+- Express
+- Nodemailer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Local Development Setup
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository to your local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   git clone https://github.com/username/repo-name.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project folder:
 
-### `npm run eject`
+   ```
+   cd repo-name
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the required dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Or, if you are using Yarn:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```
+   yarn install
+   ```
 
-## Learn More
+4. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Or, if you are using Yarn:
 
-### Code Splitting
+   ```
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. Open your browser and navigate to `http://localhost:3000`. The website should now be running locally on your machine.
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To deploy this website to a live server, follow the hosting provider's guidelines for deploying React applications. Some popular options include GitHub Pages, Netlify, and Vercel.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License. For more information, please refer to the [LICENSE](LICENSE) file in this repository.
 
-### Advanced Configuration
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions, suggestions, or encounter any issues, please don't hesitate to reach out by opening an issue in this repository or contacting Cory directly.
