@@ -4,12 +4,14 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const { Pool } = require('pg');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'build')));
 
 const pool = new Pool({
   user: process.env.DB_USER,
@@ -37,6 +39,10 @@ app.get('/api/projects', async (req, res) => {
     console.error(err.message);
     res.status(500).json({ error: 'Server error' });
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.post('/send-message', async (req, res) => {
